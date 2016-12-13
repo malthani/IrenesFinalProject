@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crimes in NYC</title>
+    <!-- Load JQuery -->
+     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+    <meta charset="utf-8">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <h3>The City of New York, is the most populous city in the United States. Located at the southern tip of the state of New York, one of the most populous urban agglomerations in the world. With a population of 8,550,405 distributed over a land area of just 305 square miles (790 km2), New York is also the most densely populated major city in the United States. New York City consists of five boroughs, Brooklyn, Queens, Manhattan, The Bronx, and Staten Island. Last year the city received 60 million visitors.</h3>
+    <h3>Being on the biggest cities in the U.S. NYC faces many challenges, violent crime in New York City has been dropping since the mid-1990s and, as of 2015, is lower than the national average for big cities. In 2014, there were 328 homicides, the lowest number since at least 1963. According to a 2015 ranking of 50 cities by The Economist, New York was the 10th overall safest major city in the world, as well as the 28th safest in personal safety.</h3>
+    <h3>The New York City Police Department records reported crime and offense data based upon the New York State Penal Law and other New York State laws. For statistical presentation purposes the numerous law categories and subsections are summarized by law class, Felony, Misdemeanor and Violation. The tabular data compiles reported crime and offense data recorded by the New York City Police Department. Separate tables are presented for the Seven Major Felonies, Non-Four Major Felony Crimes, Misdemeanors and Violations.</h3>
+    
+
+    <script>
+$(function () {
+    Highcharts.chart('container', {
+       colors: ['#a7226e', '#ec2035', '#f7db4f', '#2f9599'],
+       title: {
+            text: 'Misdemeanor Offenses',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Historical New York City  Crime Data ',
+            x: -20
+        },
+        xAxis: {
+            categories: ['2000','2001', '2002', '2003', '2004', '2005', '2006',
+                '2007', '2008', '2009', '2010', '2011']
+        },
+        yAxis: {
+            title: {
+                text: 'Offense'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'numbers'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Sex crimes',
+            data: [4394, 4584, 4218, 3978, 4019, 3937, 4803, 4393, 4289, 4459, 4512, 4632]
+        }, {
+            name: 'Dangerous weapons',
+            data: [3387, 3718, 4056, 4651, 5173, 6170, 7097, 7734, 7654, 8367, 8716, 8601]
+        }, {
+            name: 'Stolen property',
+            data: [1072, 1382, 1577, 1781, 1853, 1827, 2009, 1880, 1811, 2023, 2240, 2853]
+        }, {
+            name: 'Intoxicated driving',
+            data: [4162, 4099, 4486, 5203, 7294, 7372, 7601, 8659, 8284, 7700, 6691, 6027]
+        }]
+    });
+}); </script>
+
+
+</body>
+<footer>
+  <p>Posted by: Irene Rojas</p>
+</footer>
+</html>
